@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.react-select-dropdown.main-container {
+  display: inline-block;
+  min-width: 100px;
+  width:inherit;
+  cursor: pointer;
+  outline: none;
+}
+.react-select-dropdown .selectable-content {
+  display: none;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top:1px;
+  max-height: 100px;
+  overflow-y: overlay;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.react-select-dropdown .selectable-content.open{
+  display: block;
+}
+
+
+.react-select-dropdown .selected-label {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.react-select-dropdown .selectable-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.react-select-dropdown .selected-label i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+}
+
+.react-select-dropdown .selected-label i.downarrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.react-select-dropdown .selectable-content ul li {
+  padding: 5px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.react-select-dropdown .selectable-content ul li.selected-data {
+  background: rgb(27, 48, 238);
+  color:#fff;
+}
+
+.react-select-dropdown .selectable-content ul li:hover {
+  border: rgb(27, 48, 238);
+  color:#fff;
+}
+
+.react-select-dropdown .selected-label span.selected-labels {
+  background: rgb(27, 48, 238);
+  color:#fff;
+  margin: 2px;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  word-break: break-all;
+}
+
+.react-select-dropdown .selected-label .label{
+  display: flex;
+  flex-wrap: wrap;
 }
